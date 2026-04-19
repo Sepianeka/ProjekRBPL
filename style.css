@@ -1,0 +1,244 @@
+:root {
+  --primary-color: #000000;
+  --bg-color: #d9d9d9;
+  --surface-color: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --border-color: #000000;
+  --font-family: "Inter", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.mobile-container {
+  width: 100%;
+  max-width: 480px;
+  background-color: var(--surface-color);
+  min-height: 100vh;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+p,
+label,
+span {
+  font-size: 14px;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* Forms & Inputs */
+.form-group {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus {
+  border-color: #333;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--surface-color);
+}
+
+.btn-primary:active {
+  background-color: #333;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+.mt-4 {
+  margin-top: 16px;
+}
+.mb-4 {
+  margin-bottom: 16px;
+}
+.p-4 {
+  padding: 16px;
+}
+
+/* Content Layout */
+.content-area {
+  padding: 24px;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 80px; /* Space for bottom nav */
+}
+
+/* Cards */
+.card {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.status-badge {
+  font-weight: bold;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--surface-color);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 0;
+  z-index: 10;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 12px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.nav-item.active,
+.nav-item:hover {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+    margin-bottom: 4px;
+}
+
+/* Grids */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.product-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 120px;
+    background-color: #E0E0E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+}
+
+.product-info {
+    padding: 12px;
+}
+
+.product-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.product-price {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
